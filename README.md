@@ -2,19 +2,23 @@
 
 ![vutron-logo](src/renderer/assets/img/vutron-logo.png)
 
-Quick Start Templates for **[Vue 3](https://vuejs.org/)** + **[Electron.js](https://www.electronjs.org/)**
-
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jooy2/vutron/blob/master/LICENSE)
-![Programming Language Usage](https://img.shields.io/github/languages/top/jooy2/vutron)
-![github repo size](https://img.shields.io/github/repo-size/jooy2/vutron)
-![Stars](https://img.shields.io/github/stars/jooy2/vutron?style=social)
-![Commit Count](https://img.shields.io/github/commit-activity/y/jooy2/vutron)
-![Line Count](https://img.shields.io/tokei/lines/github/jooy2/vutron)
-[![Followers](https://img.shields.io/github/followers/jooy2?style=social)](https://github.com/jooy2)
+Quick Start Templates for **[Webpack 5](https://webpack.js.org)** + **[Vue 3](https://vuejs.org/)** + **[Electron.js](https://www.electronjs.org/)**
 
 **Vutron** is a preconfigured template for developing `Electron` cross-platform desktop apps. It uses `Vue 3` and allows you to build a fast development environment with little effort.
 
+
+
 </div>
+
+---
+
+## ⚠️ Please Read!!! ⚠️
+
+This repository uses the **Webpack 5 bundler** and is no longer maintained.
+
+**Vutron** now uses the **[ViteJS](https://vitejs.dev)** compiler for faster and easier builds. To use the main template, go to the main repository to learn more: https://github.com/jooy2/vutron
+
+---
 
 ## Advantages of use
 
@@ -48,12 +52,12 @@ Quick Start Templates for **[Vue 3](https://vuejs.org/)** + **[Electron.js](http
 
 To configure this project, the `NodeJS` version must be at least **17.1.x** or higher. (Verified and stable version is 17.1 or higher, but there doesn't seem to be any issues with NodeJS 16.16 either.)
 
-Click **[Use this template](https://github.com/jooy2/vutron/generate)** to instantly create your own project.
+Click **[Use this template](https://github.com/jooy2/vutron-webpack/generate)** to instantly create your own project.
 
 OR, Clone this repo using below command.
 
 ```shell
-$ git clone https://github.com/jooy2/vutron <PROJECT_NAME>
+$ git clone https://github.com/jooy2/vutron-webpack <PROJECT_NAME>
 ```
 
 After cloning the project, run the following command in the terminal:
@@ -95,17 +99,9 @@ $ npm run build
 
 `Multipass` configuration may be required for Linux builds. Learn more about `Multipass` through the following link: https://multipass.run/
 
-## Looking for Electron templates made with React?
-
-Also check out the `Retron` project, which consists of Vite + React + Material-UI + Electron.
-
-https://github.com/jooy2/retron
-
-## Contribute
-
-You can report issues on [Github Issue](https://github.com/jooy2/vutron/issues). You can also request a pull to fix bugs and add frequently used features.
 
 ## License
+
 Copyright © 2022 Jooy2 Released under the MIT license.
 
 The structure and some code of this project was inspired by **[electron-vue](https://github.com/SimulatedGREG/electron-vue)**.
