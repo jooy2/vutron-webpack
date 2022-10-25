@@ -9,3 +9,8 @@ export default class Utils {
     await shell.openExternal(url)
   }
 }
+
+export const {
+  getCurrentLocale,
+  openExternal
+} = Utils

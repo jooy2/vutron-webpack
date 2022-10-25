@@ -1,7 +1,7 @@
 <script setup>
 // import { useI18n } from 'vue-i18n'
 import { useTheme } from 'vuetify'
-import Utils from '../../assets/js/utils'
+import { openExternal } from '../../assets/js/utils'
 
 // const { locale } = useI18n()
 const theme = useTheme()
@@ -15,7 +15,7 @@ const handleChangeLanguage = () => {
 }
 
 const handleAbout = async () => {
-  await Utils.openExternal('https://github.com/jooy2/vutron')
+  await openExternal('https://github.com/jooy2/vutron')
 }
 </script>
 
