@@ -1,7 +1,10 @@
 {
   "productName": "Vutron",
   "appId": "com.vutron.vutron",
+  "asar": true,
+  "extends": null,
   "compression": "maximum",
+  "copyright": 'ⓒ 2022 ${author}',
   "directories": {
     "output": "dist",
     "buildResources": "buildRes"
