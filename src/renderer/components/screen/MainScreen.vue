@@ -15,7 +15,7 @@ const handleChangeLanguage = () => {
 }
 
 const handleAbout = async () => {
-  await openExternal('https://github.com/jooy2/vutron')
+  await openExternal('https://github.com/jooy2/vutron-webpack')
 }
 </script>
 
