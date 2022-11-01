@@ -1,6 +1,7 @@
-import { createVuetify } from 'vuetify/dist/vuetify'
+import { createVuetify } from 'vuetify'
 import { ko, en } from 'vuetify/locale'
 import { aliases, mdi } from 'vuetify/iconsets/mdi'
+import 'vuetify/styles'
 
 import colors from 'vuetify/lib/util/colors.mjs'
 

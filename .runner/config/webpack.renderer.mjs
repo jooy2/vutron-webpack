@@ -10,6 +10,8 @@ import eslintFriendlyFormatter from 'eslint-friendly-formatter'
 import ESLintPlugin from 'eslint-webpack-plugin'
 import externalsWhiteList from './webpack.renderer.externals.whitelist.mjs'
 import { fileURLToPath } from 'url'
+import { VuetifyPlugin } from 'webpack-plugin-vuetify'
+
 
 const IS_DEV_ENV = process.env.NODE_ENV !== 'production'
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -85,6 +87,7 @@ export default {
   },
   plugins: [
     new VueLoaderPlugin(),
+    new VuetifyPlugin({ autoImport: true }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: resolve(__dirname, '../../src/index.ejs'),
