@@ -12,7 +12,7 @@ Quick Start Templates for **[Webpack 5](https://webpack.js.org)** + **[Vue 3](ht
 
 ---
 
-## ⚠️ Please Read!!! ⚠️
+## ⚠️ IMPORTANT! This project has been moved and is no longer maintained. ⚠️
 
 This repository uses the **Webpack 5 bundler** and is no longer maintained.
 
@@ -43,7 +43,7 @@ This repository uses the **Webpack 5 bundler** and is no longer maintained.
 - [Vue-i18n 9.x](https://kazupon.github.io/vue-i18n)
 - [Vue-router 4.x](https://router.vuejs.org)
 - [Pinia 2.x](https://pinia.vuejs.org)
-- [Vuetify 3.x (Beta)](https://next.vuetifyjs.com)
+- [Vuetify 3.x](https://vuetifyjs.com)
 - [BabelJS 7.x](https://babeljs.io)
 - [Webpack 5.x](https://webpack.js.org)
 - [ESLint 8.x](https://eslint.org)
