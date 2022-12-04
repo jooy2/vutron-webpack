@@ -8,10 +8,6 @@ import i18n from './plugins/i18n'
 
 const app = createApp(App)
 
-app
-  .use(vuetify)
-  .use(i18n)
-  .use(router)
-  .use(createPinia())
+app.use(vuetify).use(i18n).use(router).use(createPinia())
 
 app.mount('#app')

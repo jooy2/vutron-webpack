@@ -1,4 +1,1 @@
-export default [
-  'vue',
-  'vuetify'
-]
+export default ['vue', 'vuetify']

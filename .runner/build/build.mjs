@@ -11,7 +11,7 @@ import rendererConfig from '../config/webpack.renderer.mjs'
 const TAG_ERROR = `${chalk.bgRed.white(' ERROR ')} `
 const TAG_SUCCESS = `${chalk.bgGreen.black(' SUCCESS ')} `
 
-async function build () {
+async function build() {
   FsMan.empty('dist/electron')
 
   let results = ''
@@ -22,10 +22,10 @@ async function build () {
         title: 'building main process',
         task: async () => {
           await pack(mainConfig)
-            .then(result => {
+            .then((result) => {
               results += result + '\n\n'
             })
-            .catch(err => {
+            .catch((err) => {
               console.log(`\n  ${TAG_ERROR}failed to build main process`)
               console.error(`\n${err}\n`)
             })
@@ -35,10 +35,10 @@ async function build () {
         title: 'building renderer process',
         task: async () => {
           await pack(rendererConfig)
-            .then(result => {
+            .then((result) => {
               results += result + '\n\n'
             })
-            .catch(err => {
+            .catch((err) => {
               console.log(`\n  ${TAG_ERROR}failed to build renderer process`)
               console.error(`\n${err}\n`)
             })
@@ -50,10 +50,9 @@ async function build () {
     }
   )
 
-  await tasks.run()
-    .catch(() => {
-      process.exit(1)
-    })
+  await tasks.run().catch(() => {
+    process.exit(1)
+  })
 
   process.stdout.write('\x1B[2J\x1B[0f')
   console.log(`
@@ -64,7 +63,7 @@ async function build () {
   process.exit()
 }
 
-function pack (config) {
+function pack(config) {
   return new Promise((resolve, reject) => {
     config.mode = 'production'
 
@@ -74,27 +73,30 @@ function pack (config) {
       } else if (stats.hasErrors()) {
         let err = ''
 
-        stats.toString({
-          chunks: false,
-          colors: true
-        })
+        stats
+          .toString({
+            chunks: false,
+            colors: true
+          })
           .split(/\r?\n/)
-          .forEach(line => {
+          .forEach((line) => {
             err += `    ${line}\n`
           })
 
         reject(err)
       } else {
-        resolve(stats.toString({
-          chunks: false,
-          colors: true
-        }))
+        resolve(
+          stats.toString({
+            chunks: false,
+            colors: true
+          })
+        )
       }
     })
   })
 }
 
-(async () => {
+;(async () => {
   performance.now()
   await build()
 })()

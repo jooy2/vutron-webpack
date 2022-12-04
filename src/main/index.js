@@ -11,8 +11,10 @@ let errorWindow
 
 app.on('ready', () => {
   if (!Constants.IS_DEV_ENV) {
-    global.__static = join(dirname(fileURLToPath(import.meta.url)), '/static')
-      .replace(/\\/g, '\\\\')
+    global.__static = join(dirname(fileURLToPath(import.meta.url)), '/static').replace(
+      /\\/g,
+      '\\\\'
+    )
   }
 
   macOSDisableDefaultMenuItem()

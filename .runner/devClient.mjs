@@ -1,6 +1,6 @@
 import * as hotClient from 'webpack-hot-middleware/client.js?noInfo=true&reload=true'
 
-hotClient.subscribe(event => {
+hotClient.subscribe((event) => {
   if (event.action === 'compiling') {
     document.body.innerHTML += `
       <style>

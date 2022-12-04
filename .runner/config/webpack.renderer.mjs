@@ -12,7 +12,6 @@ import externalsWhiteList from './webpack.renderer.externals.whitelist.mjs'
 import { fileURLToPath } from 'url'
 import { VuetifyPlugin } from 'webpack-plugin-vuetify'
 
-
 const IS_DEV_ENV = process.env.NODE_ENV !== 'production'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -28,7 +27,7 @@ export default {
     renderer: join(__dirname, '../../src/renderer/main.js')
   },
   externals: [
-    ...Object.keys(packageJson.dependencies || {}).filter(d => !externalsWhiteList.includes(d))
+    ...Object.keys(packageJson.dependencies || {}).filter((d) => !externalsWhiteList.includes(d))
   ],
   module: {
     rules: [
@@ -91,7 +90,7 @@ export default {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: resolve(__dirname, '../../src/index.ejs'),
-      templateParameters (compilation, assets, options) {
+      templateParameters(compilation, assets, options) {
         return {
           compilation,
           webpack: compilation.getStats().toJson(),
@@ -110,45 +109,46 @@ export default {
       },
       isDevelopment: IS_DEV_ENV,
       staticPath: join(__dirname, '/static').replace(/\\/g, '\\\\'),
-      nodeModules: IS_DEV_ENV
-        ? resolve(__dirname, '../../node_modules')
-        : false
+      nodeModules: IS_DEV_ENV ? resolve(__dirname, '../../node_modules') : false
     }),
     new webpack.NoEmitOnErrorsPlugin(),
     new ESLintPlugin({
       extensions: ['js', 'vue'],
-      exclude: [
-        '/node_modules/'
-      ],
+      exclude: ['/node_modules/'],
       formatter: eslintFriendlyFormatter()
     }),
-    new webpack.DefinePlugin(IS_DEV_ENV
-      ? {
-          __static: `"${join(__dirname, '../../static').replace(/\\/g, '\\\\')}"`,
-          __VUE_OPTIONS_API__: false,
-          __VUE_PROD_DEVTOOLS__: false
-        }
-      : {
-          'process.env.NODE_ENV': '"production"',
-          __VUE_OPTIONS_API__: false,
-          __VUE_PROD_DEVTOOLS__: false
-        }
+    new webpack.DefinePlugin(
+      IS_DEV_ENV
+        ? {
+            __static: `"${join(__dirname, '../../static').replace(/\\/g, '\\\\')}"`,
+            __VUE_OPTIONS_API__: false,
+            __VUE_PROD_DEVTOOLS__: false
+          }
+        : {
+            'process.env.NODE_ENV': '"production"',
+            __VUE_OPTIONS_API__: false,
+            __VUE_PROD_DEVTOOLS__: false
+          }
     ),
-    ...IS_DEV_ENV
+    ...(IS_DEV_ENV
       ? []
-      : [new CopyWebpackPlugin({
-          patterns: [
-            {
-              from: join(__dirname, '../../static'),
-              to: join(__dirname, '../../dist/electron/static')
-            }
-          ]
-        })],
-    ...IS_DEV_ENV
+      : [
+          new CopyWebpackPlugin({
+            patterns: [
+              {
+                from: join(__dirname, '../../static'),
+                to: join(__dirname, '../../dist/electron/static')
+              }
+            ]
+          })
+        ]),
+    ...(IS_DEV_ENV
       ? []
-      : [new webpack.LoaderOptionsPlugin({
-          minimize: true
-        })]
+      : [
+          new webpack.LoaderOptionsPlugin({
+            minimize: true
+          })
+        ])
   ],
   cache: true,
   output: {

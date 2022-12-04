@@ -16,9 +16,7 @@ export default {
   entry: {
     main: join(__dirname, '../../src/main/index.js')
   },
-  externals: [
-    ...Object.keys(packageJson.dependencies || {})
-  ],
+  externals: [...Object.keys(packageJson.dependencies || {})],
   module: {
     rules: [
       {
@@ -52,16 +50,16 @@ export default {
       formatter: eslintFriendlyFormatter()
     }),
     new webpack.DefinePlugin({
-      ...IS_DEV_ENV
+      ...(IS_DEV_ENV
         ? {
             __static: `"${join(__dirname, '../../static').replace(/\\/g, '\\\\')}"`
           }
-        : {},
-      ...IS_DEV_ENV
+        : {}),
+      ...(IS_DEV_ENV
         ? {}
         : {
             'process.env.NODE_ENV': '"production"'
-          }
+          })
     })
   ],
   resolve: {

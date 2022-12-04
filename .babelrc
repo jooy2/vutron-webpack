@@ -3,25 +3,38 @@
   "env": {
     "main": {
       "presets": [
-        ["@babel/preset-env", {
-          "targets": { "node": 17 }
-        }]
+        [
+          "@babel/preset-env",
+          {
+            "targets": { "node": 17 }
+          }
+        ]
       ]
     },
     "renderer": {
       "presets": [
-        ["@babel/preset-env", {
-          "modules": false
-        }]
+        [
+          "@babel/preset-env",
+          {
+            "modules": false
+          }
+        ]
       ]
     },
     "web": {
       "presets": [
-        ["@babel/preset-env", {
-          "modules": false
-        }]
+        [
+          "@babel/preset-env",
+          {
+            "modules": false
+          }
+        ]
       ]
     }
   },
-  "plugins": ["@vue/babel-plugin-jsx", "@babel/plugin-transform-runtime", "@babel/plugin-syntax-import-assertions"]
+  "plugins": [
+    "@vue/babel-plugin-jsx",
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-syntax-import-assertions"
+  ]
 }

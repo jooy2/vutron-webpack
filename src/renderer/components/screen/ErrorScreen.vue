@@ -1,8 +1,5 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template>
-  <div>
-    Unknown error occurred
-  </div>
+  <div> Unknown error occurred </div>
 </template>

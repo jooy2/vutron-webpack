@@ -17,13 +17,16 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 let electronProcess = null
 let manualRestart = false
 
-function log (processName, data, color = 'yellow') {
+function log(processName, data, color = 'yellow') {
   let strLog = ''
 
   if (typeof data === 'object') {
-    data.toString().split(/\r?\n/).forEach(line => {
-      strLog += ' ' + line + '\n'
-    })
+    data
+      .toString()
+      .split(/\r?\n/)
+      .forEach((line) => {
+        strLog += ' ' + line + '\n'
+      })
   } else {
     strLog += ` ${data}\n`
   }
@@ -33,17 +36,20 @@ function log (processName, data, color = 'yellow') {
   }
 }
 
-function startRenderer () {
-  return new Promise(resolve => {
-    (async () => {
-      rendererConfig.entry.renderer = [join(__dirname, 'devClient.mjs'), rendererConfig.entry.renderer]
+function startRenderer() {
+  return new Promise((resolve) => {
+    ;(async () => {
+      rendererConfig.entry.renderer = [
+        join(__dirname, 'devClient.mjs'),
+        rendererConfig.entry.renderer
+      ]
 
       const compiler = webpack({
         mode: 'development',
         ...rendererConfig
       })
 
-      compiler.hooks.done.tap('done', stats => {
+      compiler.hooks.done.tap('done', (stats) => {
         log('Renderer', stats)
       })
 
@@ -58,11 +64,13 @@ function startRenderer () {
               ignored: /node_modules/
             }
           },
-          setupMiddlewares (middlewares, devServer) {
-            devServer.app.use(webpackHotMiddleware(compiler, {
-              log: false,
-              heartbeat: 5000
-            }))
+          setupMiddlewares(middlewares, devServer) {
+            devServer.app.use(
+              webpackHotMiddleware(compiler, {
+                log: false,
+                heartbeat: 5000
+              })
+            )
             devServer.middleware.waitUntilValid(() => {
               resolve()
             })
@@ -78,8 +86,8 @@ function startRenderer () {
   })
 }
 
-function startMain () {
-  return new Promise(resolve => {
+function startMain() {
+  return new Promise((resolve) => {
     mainConfig.entry.main = [join(__dirname, '../src/main/index.dev.js'), mainConfig.entry.main]
 
     const compiler = webpack({
@@ -116,20 +124,17 @@ function startMain () {
   })
 }
 
-function startElectron () {
+function startElectron() {
   electronProcess = spawn(electron, [
-    ...[
-      '--inspect=5858',
-      join(__dirname, '/../dist/electron/main.js')
-    ],
+    ...['--inspect=5858', join(__dirname, '/../dist/electron/main.js')],
     ...process.argv.slice(2)
   ])
 
-  electronProcess.stdout.on('data', data => {
+  electronProcess.stdout.on('data', (data) => {
     log('Electron', data, 'blue')
   })
 
-  electronProcess.stderr.on('data', data => {
+  electronProcess.stderr.on('data', (data) => {
     log('Electron', data, 'red')
   })
 
@@ -140,7 +145,7 @@ function startElectron () {
   })
 }
 
-(async () => {
+;(async () => {
   try {
     await startRenderer()
     await startMain()
