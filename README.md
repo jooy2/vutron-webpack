@@ -6,8 +6,6 @@ Quick Start Templates for **[Webpack 5](https://webpack.js.org)** + **[Vue 3](ht
 
 **Vutron** is a preconfigured template for developing `Electron` cross-platform desktop apps. It uses `Vue 3` and allows you to build a fast development environment with little effort.
 
-
-
 </div>
 
 ---
@@ -37,7 +35,7 @@ This repository uses the **Webpack 5 bundler** and is no longer maintained.
 
 ## Pre-configured components
 
-- [Electron 21.x.x](https://www.electronjs.org)
+- [Electron 22.x.x](https://www.electronjs.org)
 - [Electron Builder 23.x](https://www.electron.build)
 - [Vue 3.2.x](https://vuejs.org)
 - [Vue-i18n 9.x](https://kazupon.github.io/vue-i18n)
@@ -102,6 +100,6 @@ $ npm run build
 
 ## License
 
-Copyright © 2022 Jooy2 Released under the MIT license.
+Copyright © 2022 [Jooy2](https://jooy2.com) <[jooy2.contact@gmail.com](mailto:jooy2.contact@gmail.com)> Released under the MIT license.
 
 The structure and some code of this project was inspired by **[electron-vue](https://github.com/SimulatedGREG/electron-vue)**.
