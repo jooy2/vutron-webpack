@@ -1,6 +1,5 @@
 # Node artifact files
 node_modules/
-dist/
 
 # Compiled Java class files
 *.class
@@ -19,6 +18,7 @@ target/
 
 # JetBrains IDE
 .idea/
+.vscode/
 
 # Unit test reports
 TEST*.xml
@@ -46,3 +46,5 @@ npm-debug.log
 npm-debug.log.*
 thumbs.db
 .env
+dist/
+release/

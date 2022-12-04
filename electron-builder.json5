@@ -6,11 +6,12 @@
   "compression": "maximum",
   "copyright": 'ⓒ 2022 ${author}',
   "directories": {
-    "output": "dist",
+    "output": "./release/${version}",
     "buildResources": "buildAssets"
   },
   "files": [
-    "dist/electron/**/*"
+    "dist/electron/**/*",
+    '!release/**/*'
   ],
   "artifactName": "${productName} ${version}.${ext}",
   "mac": {
