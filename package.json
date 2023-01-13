@@ -24,7 +24,7 @@
     "node": ">=17.1.0"
   },
   "dependencies": {
-    "@electron/remote": "^2.0.8",
+    "@electron/remote": "^2.0.9",
     "pinia": "^2.0.28",
     "v8-compile-cache": "^2.3.0",
     "vue": "^3.2.45",
