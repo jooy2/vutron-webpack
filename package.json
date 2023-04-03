@@ -33,7 +33,7 @@
     "vuetify": "^3.1.12"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.12",
+    "@babel/core": "^7.21.4",
     "@babel/eslint-parser": "^7.19.1",
     "@babel/plugin-syntax-import-assertions": "^7.20.0",
     "@babel/plugin-transform-runtime": "^7.21.4",
