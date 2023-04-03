@@ -59,7 +59,7 @@
     "listr": "^0.14.3",
     "node-loader": "^2.0.0",
     "prettier": "^2.8.7",
-    "qsu": "^1.1.4",
+    "qsu": "^1.1.7",
     "terser-webpack-plugin": "^5.3.6",
     "vue-eslint-parser": "^9.1.0",
     "vue-html-loader": "^1.2.4",
