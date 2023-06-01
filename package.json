@@ -61,7 +61,7 @@
     "prettier": "^2.8.7",
     "qsu": "^1.1.7",
     "terser-webpack-plugin": "^5.3.6",
-    "vue-eslint-parser": "^9.1.0",
+    "vue-eslint-parser": "^9.3.0",
     "vue-html-loader": "^1.2.4",
     "vue-loader": "^17.0.1",
     "vue-style-loader": "^4.1.3",
