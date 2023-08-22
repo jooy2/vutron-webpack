@@ -61,7 +61,7 @@ function startRenderer() {
             directory: join(__dirname, '../'),
             watch: {
               usePolling: true,
-              ignored: /node_modules/
+              ignored: [/node_modules/, /\.git/, /\.vscode/, /\.idea/]
             }
           },
           setupMiddlewares(middlewares, devServer) {
