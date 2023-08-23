@@ -4,7 +4,7 @@
   asar: true,
   extends: null,
   compression: 'maximum',
-  copyright: 'ⓒ 2022 ${author}',
+  copyright: 'ⓒ ${author}',
   directories: {
     output: './release/${version}',
     buildResources: 'buildAssets'
