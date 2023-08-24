@@ -1,9 +1,10 @@
 import { app } from 'electron'
-import './index'
-import * as electronDevtoolsInstaller from 'electron-devtools-installer'
+import { installExtension, VUEJS_DEVTOOLS } from 'electron-extension-installer'
 
 app.on('ready', async () => {
-  await electronDevtoolsInstaller.default(electronDevtoolsInstaller.VUEJS_DEVTOOLS).catch((e) => {
-    console.log(`Failed to install Vue Devtools \n(${e})`)
+  await installExtension(VUEJS_DEVTOOLS, {
+    loadExtensionOptions: {
+      allowFileAccess: true
+    }
   })
 })
