@@ -10,11 +10,12 @@ Quick Start Templates for **[Webpack 5](https://webpack.js.org)** + **[Vue 3](ht
 
 ---
 
-## ⚠️ IMPORTANT! This project has been moved to a new repository. ⚠️
-
-This repository uses the **Webpack 5 bundler** and is no longer maintained.
-
-**Vutron** now uses the **[ViteJS](https://vitejs.dev)** compiler for faster and easier builds. To use the main template, go to the main repository to learn more: https://github.com/jooy2/vutron
+> [!IMPORTANT]
+> This project has been moved to a new repository. ⚠️
+>
+> This repository uses the **Webpack 5 bundler** and is no longer maintained.
+>
+> **Vutron** now uses the **[ViteJS](https://vitejs.dev)** compiler for faster and easier builds. To use the main template, go to the main repository to learn more: https://github.com/jooy2/vutron
 
 ---
 
