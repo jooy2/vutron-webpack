@@ -28,6 +28,6 @@ Some documentation content may differ from that in the `webpack` repository.
 
 ## License
 
-Copyright © 2022-2023 [Jooy2](https://jooy2.com) <[jooy2.contact@gmail.com](mailto:jooy2.contact@gmail.com)> Released under the MIT license.
+Copyright © 2022-2024 [Jooy2](https://jooy2.com) <[jooy2.contact@gmail.com](mailto:jooy2.contact@gmail.com)> Released under the MIT license.
 
 The structure and some code of this project was inspired by **[electron-vue](https://github.com/SimulatedGREG/electron-vue)**.
