@@ -1,7 +1,7 @@
 import './env.mjs'
 import chalk from 'chalk'
 import webpack from 'webpack'
-import Listr from 'listr'
+import { Listr } from 'listr2'
 import { performance } from 'perf_hooks'
 import _ from 'qsu'
 import FsMan from 'fsman'
