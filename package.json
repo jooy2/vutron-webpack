@@ -26,7 +26,6 @@
   "dependencies": {
     "@electron/remote": "^2.1.1",
     "pinia": "^2.1.7",
-    "v8-compile-cache": "^2.4.0",
     "vue": "^3.3.13",
     "vue-i18n": "^9.8.0",
     "vue-router": "^4.2.5",

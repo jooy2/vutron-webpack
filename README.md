@@ -15,7 +15,7 @@ Quick Start Templates for **[Webpack 5](https://webpack.js.org)** + **[Vue 3](ht
 >
 > The Vutron project has been replaced by the `ViteJS` compiler and is maintained at the following new repository link: https://github.com/jooy2/vutron
 >
-> **ViteJS** is faster than Webpack 5 and allows you to build projects with a simpler setup. To learn more, see the following links [ViteJS Homepage](https://vitejs.dev)
+> **ViteJS** is faster than Webpack 5 and allows you to build projects with a simpler setup. To learn more, see the following links: [ViteJS Homepage](https://vitejs.dev)
 
 ---
 

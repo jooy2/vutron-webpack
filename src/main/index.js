@@ -1,4 +1,3 @@
-import 'v8-compile-cache'
 import { app } from 'electron'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
