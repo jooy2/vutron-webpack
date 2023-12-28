@@ -12,6 +12,7 @@
   files: ['dist/electron/**/*', '!release/**/*'],
   artifactName: '${productName} ${version}.${ext}',
   mac: {
+    identity: null,
     bundleVersion: '1.0',
     hardenedRuntime: true,
     gatekeeperAssess: false,
