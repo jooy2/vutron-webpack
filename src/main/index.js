@@ -1,9 +1,8 @@
-import { app } from 'electron'
+import {app, systemPreferences} from 'electron'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import Constants from './utils/Constants'
 import { createErrorWindow, createMainWindow } from './MainRunner'
-import { macOSDisableDefaultMenuItem } from './utils/Menus'
 
 let mainWindow
 let errorWindow
@@ -16,7 +15,10 @@ app.on('ready', () => {
     )
   }
 
-  macOSDisableDefaultMenuItem()
+  if (Constants.IS_MAC) {
+    systemPreferences.setUserDefault('NSDisabledDictationMenuItem', 'boolean', true)
+    systemPreferences.setUserDefault('NSDisabledCharacterPaletteMenuItem', 'boolean', true)
+  }
 
   mainWindow = createMainWindow(mainWindow)
 })
