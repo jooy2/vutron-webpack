@@ -10,10 +10,6 @@ const handleChangeTheme = () => {
   theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
 }
 
-const handleChangeLanguage = () => {
-  // locale.value = 'en' // TODO
-}
-
 const handleAbout = async () => {
   await openExternal('https://github.com/jooy2/vutron-webpack')
 }
@@ -28,17 +24,12 @@ const handleAbout = async () => {
       <v-col cols="12">
         {{ $t('desc.welcome') }}
       </v-col>
-      <v-col cols="4">
+      <v-col cols="6">
         <v-btn block color="primary" @click="handleChangeTheme">
           {{ $t('menu.change-theme') }}
         </v-btn>
       </v-col>
-      <v-col cols="4">
-        <v-btn block disabled color="primary" @click="handleChangeLanguage">
-          {{ $t('menu.change-language') }}
-        </v-btn>
-      </v-col>
-      <v-col cols="4">
+      <v-col cols="6">
         <v-btn block color="primary" @click="handleAbout">
           {{ $t('menu.about') }}
         </v-btn>
