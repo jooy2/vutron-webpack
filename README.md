@@ -10,8 +10,7 @@ Quick Start Templates for **[Webpack 5](https://webpack.js.org)** + **[Vue 3](ht
 
 ---
 
-> [!IMPORTANT]
-> This project is for Webpack 5 builds and has limited maintenance.
+> [!IMPORTANT] This project is for Webpack 5 builds and has limited maintenance.
 >
 > The Vutron project has been replaced by the `ViteJS` compiler and is maintained at the following new repository link: https://github.com/jooy2/vutron
 >
@@ -21,13 +20,12 @@ Quick Start Templates for **[Webpack 5](https://webpack.js.org)** + **[Vue 3](ht
 
 ## Documentation
 
-The `webpack` based **Vutron** project documentation is no longer available.
-Please see the [documentation page](https://vutron.jooy2.com) for the new [Vutron based on Vite](https://github.com/jooy2/vutron).
+The `webpack` based **Vutron** project documentation is no longer available. Please see the [documentation page](https://vutron.cdget.com) for the new [Vutron based on Vite](https://github.com/jooy2/vutron).
 
 Some documentation content may differ from that in the `webpack` repository.
 
 ## License
 
-Copyright © 2022-2024 [Jooy2](https://jooy2.com) <[jooy2.contact@gmail.com](mailto:jooy2.contact@gmail.com)> Released under the MIT license.
+Copyright © 2022-2024 [CDGet](https://cdget.com) <[jooy2.contact@gmail.com](mailto:jooy2.contact@gmail.com)> Released under the MIT license.
 
 The structure and some code of this project was inspired by **[electron-vue](https://github.com/SimulatedGREG/electron-vue)**.
