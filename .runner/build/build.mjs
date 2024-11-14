@@ -3,16 +3,16 @@ import chalk from 'chalk'
 import webpack from 'webpack'
 import { Listr } from 'listr2'
 import { performance } from 'perf_hooks'
-import _ from 'qsu'
-import FsMan from 'fsman'
+import { duration } from 'qsu'
 import mainConfig from '../config/webpack.main.mjs'
 import rendererConfig from '../config/webpack.renderer.mjs'
+import { deleteAllFileFromDirectory } from 'fsman'
 
 const TAG_ERROR = `${chalk.bgRed.white(' ERROR ')} `
 const TAG_SUCCESS = `${chalk.bgGreen.black(' SUCCESS ')} `
 
 async function build() {
-  FsMan.empty('dist/electron')
+  await deleteAllFileFromDirectory('dist/electron')
 
   let results = ''
 
@@ -58,7 +58,7 @@ async function build() {
   console.log(`
     \n\n${results}
     ${TAG_SUCCESS}Wait for ${chalk.greenBright('`electron-builder`')} process...
-    ${TAG_SUCCESS}${chalk.yellowBright(`Webpack Build Time: ${_.msToTime(performance.now())}`)}\n
+    ${TAG_SUCCESS}${chalk.yellowBright(`Webpack Build Time: ${duration(performance.now())}`)}\n
   `)
   process.exit()
 }

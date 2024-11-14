@@ -1,5 +1,5 @@
 import { join, dirname } from 'path'
-import packageJson from '../../package.json' assert { type: 'json' }
+import packageJson from '../../package.json' with { type: 'json' }
 import webpack from 'webpack'
 
 import TerserPlugin from 'terser-webpack-plugin'
