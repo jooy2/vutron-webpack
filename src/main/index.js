@@ -1,4 +1,4 @@
-import {app, systemPreferences} from 'electron'
+import { app, systemPreferences } from 'electron'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import Constants from './utils/Constants'
