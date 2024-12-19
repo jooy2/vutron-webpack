@@ -25,8 +25,11 @@ The `webpack` based **Vutron** project documentation is no longer available. Ple
 
 Some documentation content may differ from that in the `webpack` repository.
 
+## Contributing
+
+Anyone can contribute to the project by reporting new issues or submitting a pull request. For more information, please see [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## License
 
-Copyright © 2022-2024 [CDGet](https://cdget.com) <[jooy2.contact@gmail.com](mailto:jooy2.contact@gmail.com)> Released under the MIT license.
+Please see the [LICENSE](LICENSE) file for more information about project owners, usage rights, and more.
 
-The structure and some code of this project was inspired by **[electron-vue](https://github.com/SimulatedGREG/electron-vue)**.
