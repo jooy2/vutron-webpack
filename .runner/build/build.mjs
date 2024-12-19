@@ -4,9 +4,9 @@ import webpack from 'webpack'
 import { Listr } from 'listr2'
 import { performance } from 'perf_hooks'
 import { duration } from 'qsu'
+import { deleteAllFileFromDirectory } from 'qsu-fs'
 import mainConfig from '../config/webpack.main.mjs'
 import rendererConfig from '../config/webpack.renderer.mjs'
-import { deleteAllFileFromDirectory } from 'fsman'
 
 const TAG_ERROR = `${chalk.bgRed.white(' ERROR ')} `
 const TAG_SUCCESS = `${chalk.bgGreen.black(' SUCCESS ')} `
