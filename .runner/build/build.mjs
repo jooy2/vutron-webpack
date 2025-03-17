@@ -4,7 +4,7 @@ import webpack from 'webpack'
 import { Listr } from 'listr2'
 import { performance } from 'perf_hooks'
 import { duration } from 'qsu'
-import { deleteAllFileFromDirectory } from 'qsu-fs'
+import { deleteAllFileFromDirectory } from 'qsu/node'
 import mainConfig from '../config/webpack.main.mjs'
 import rendererConfig from '../config/webpack.renderer.mjs'
 
