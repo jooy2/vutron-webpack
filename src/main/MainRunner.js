@@ -4,6 +4,7 @@ import { join } from 'path'
 import * as electronRemote from '@electron/remote/main'
 
 const getAppIcon = () => {
+  // eslint-disable-next-line no-undef
   return join(__static, Constants.APP_ICON)
 }
 

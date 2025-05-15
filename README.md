@@ -10,8 +10,7 @@ Quick Start Templates for **[Webpack 5](https://webpack.js.org)** + **[Vue 3](ht
 
 ---
 
-> [!IMPORTANT]
-> This project is for Webpack 5 builds and has limited maintenance.
+> [!IMPORTANT] This project is for Webpack 5 builds and has limited maintenance.
 >
 > The Vutron project has been replaced by the `ViteJS` compiler and is maintained at the following new repository link: https://github.com/jooy2/vutron
 >
@@ -32,4 +31,3 @@ Anyone can contribute to the project by reporting new issues or submitting a pul
 ## License
 
 Please see the [LICENSE](LICENSE) file for more information about project owners, usage rights, and more.
-

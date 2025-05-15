@@ -3,7 +3,6 @@ import packageJson from '../../package.json' with { type: 'json' }
 import webpack from 'webpack'
 
 import TerserPlugin from 'terser-webpack-plugin'
-import eslintFriendlyFormatter from 'eslint-friendly-formatter'
 import ESLintPlugin from 'eslint-webpack-plugin'
 import { fileURLToPath } from 'url'
 
@@ -46,8 +45,7 @@ export default {
   plugins: [
     new webpack.NoEmitOnErrorsPlugin(),
     new ESLintPlugin({
-      extensions: ['js'],
-      formatter: eslintFriendlyFormatter()
+      extensions: ['js']
     }),
     new webpack.DefinePlugin({
       ...(IS_DEV_ENV

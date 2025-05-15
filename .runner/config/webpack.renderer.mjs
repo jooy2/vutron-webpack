@@ -6,7 +6,6 @@ import TerserPlugin from 'terser-webpack-plugin'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { VueLoaderPlugin } from 'vue-loader'
-import eslintFriendlyFormatter from 'eslint-friendly-formatter'
 import ESLintPlugin from 'eslint-webpack-plugin'
 import externalsWhiteList from './webpack.renderer.externals.whitelist.mjs'
 import { fileURLToPath } from 'url'
@@ -110,8 +109,7 @@ export default {
     new webpack.NoEmitOnErrorsPlugin(),
     new ESLintPlugin({
       extensions: ['js', 'vue'],
-      exclude: ['/node_modules/'],
-      formatter: eslintFriendlyFormatter()
+      exclude: ['/node_modules/']
     }),
     new webpack.DefinePlugin(
       IS_DEV_ENV
