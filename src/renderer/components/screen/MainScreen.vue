@@ -7,7 +7,7 @@ import { openExternal } from '../../assets/js/utils'
 const theme = useTheme()
 
 const handleChangeTheme = () => {
-  theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
+  theme.change(theme.global.current.value.dark ? 'light' : 'dark')
 }
 
 const handleAbout = async () => {
